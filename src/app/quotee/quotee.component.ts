@@ -26,7 +26,7 @@ completeQuote(isComplete:boolean, index:number){
 
 @Output() isComplete = new EventEmitter<boolean>();
 
-quoteComplete(complete:boolean){
+quoteDelete(complete:boolean){
   this.isComplete.emit(complete);
 }
 
