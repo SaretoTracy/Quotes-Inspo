@@ -5,7 +5,10 @@
         <ul>
             <p *ngFor='let quote of quotes'>
                 {{quote.quote}}
-                <app-quotee-detail [quote]='quote'></app-quotee-detail>
+                <button (click)='toggleDetails(i)'>Toggle Details</button>
+                <!--shows and hide authors description-->
+
+                <app-quotee-detail *ngIf='quote.showauthor' [quote]='quote'></app-quotee-detail>
             </p>
         </ul>
     </div>

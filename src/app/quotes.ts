@@ -1,10 +1,7 @@
 export class Quotes {
-    id:number;
-    quote:string;
-    author:string
-    constructor(id:number, quote:string, author:string){
-this.id=id;
-this.quote=quote;
-this.author=author;
-    }
+    showauthor: boolean;//enable toggle between showing and hiding a author description
+    
+  constructor(public id: number,public quote: string,public author: string){
+    this.showauthor=false;
+  }
 }
