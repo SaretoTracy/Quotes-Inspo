@@ -1,10 +1,10 @@
 export class Quotes {
     id:number;
     quote:string;
-    showauthor:boolean
+    author:string
     constructor(id:number, quote:string, author:string){
 this.id=id;
 this.quote=quote;
-this.showauthor=false
+this.author=author;
     }
 }

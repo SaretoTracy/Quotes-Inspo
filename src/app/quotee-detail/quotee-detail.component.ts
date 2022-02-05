@@ -1,11 +1,13 @@
-import { Component, OnInit } from '@angular/core';
-
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Quotes } from '../quotes';
 @Component({
   selector: 'app-quotee-detail',
   templateUrl: './quotee-detail.component.html',
   styleUrls: ['./quotee-detail.component.css']
 })
 export class QuoteeDetailComponent implements OnInit {
+  @Input() quote: any;
+  
 
   constructor() { }
 
