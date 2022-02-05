@@ -8,7 +8,12 @@ export class QuoteeDetailComponent implements OnInit {
   //input binding
   @Input() quote: any;
   
+//output property binding
+@Output() isComplete = new EventEmitter<boolean>();
 
+goalComplete(complete:boolean){
+  this.isComplete.emit(complete);
+}
   constructor() { }
 
   ngOnInit(): void {
