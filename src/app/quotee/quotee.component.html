@@ -3,11 +3,11 @@
     <img src="/src/assets/images/quotes-icon.png" alt="">
     <div>
         <ul>
-            <p *ngFor='let quote of quotes'>
+            <p *ngFor='let quote of quotes;let i = index'>
+                <!-- to register the index of each quote item in the quotes list. -->
                 {{quote.quote}}
-                <button (click)='toggleDetails(i)'>Toggle Details</button>
+                <button (click)='toggleDetails(i)'>more</button>
                 <!--shows and hide authors description-->
-
                 <app-quotee-detail *ngIf='quote.showauthor' [quote]='quote'></app-quotee-detail>
             </p>
         </ul>
