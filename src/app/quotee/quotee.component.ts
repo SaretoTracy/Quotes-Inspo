@@ -6,6 +6,10 @@ import { Quotes } from '../quotes';
   styleUrls: ['./quotee.component.css']
 })
 export class QuoteeComponent implements OnInit {
+  quotes: Quotes[] = [
+   new Quotes(1, "never give up"),
+   new Quotes(2, "keep up")
+  ];
 
   constructor() { }
 
