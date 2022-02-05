@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Quotes } from '../quotes';
 @Component({
   selector: 'app-quotee',
@@ -21,6 +21,13 @@ completeQuote(isComplete:boolean, index:number){
   if (isComplete) {
     this.quotes.splice(index,1);
   }
+}
+@Input() quote:any;
+
+@Output() isComplete = new EventEmitter<boolean>();
+
+quoteComplete(complete:boolean){
+  this.isComplete.emit(complete);
 }
 
   constructor() { }

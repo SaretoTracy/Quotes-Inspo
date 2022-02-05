@@ -10,7 +10,7 @@ import { QuoteeDetailComponent } from './quotee-detail/quotee-detail.component';
   declarations: [
     AppComponent,
     QuoteeComponent,
-    QuoteeDetailComponent
+    QuoteeDetailComponent,
   ],
   imports: [
     BrowserModule,
