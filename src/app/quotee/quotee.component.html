@@ -1,18 +1,16 @@
 <div class="main">
     <h1>Quotes <span>Inspo</span></h1>
-    <img src="/src/assets/images/quotes-icon.png" alt="">
-    <div>
-        <ul>
-            <div class="quotes col-md-6" *ngFor='let quote of quotes;let i = index'>
-                <!-- to register the index of each quote item in the quotes list. -->
-                <h1>quote</h1>
-                <p> {{quote.quote}}</p>
-                <button (click)='toggleDetails(i)'><i class="fas fa-chevron-down"></i></button>
-                <!--shows and hide authors description-->
 
-                <app-quotee-detail *ngIf='quote.showauthor' [quote]='quote'></app-quotee-detail>
+    <ul>
+        <div class="quotes col-md-6" *ngFor='let quote of quotes;let i = index'>
+            <!-- to register the index of each quote item in the quotes list. -->
+            <h1>quote</h1>
+            <p> {{quote.quote}}</p>
+            <button (click)='toggleDetails(i)'><i class="fas fa-chevron-down"></i></button>
+            <!--shows and hide authors description-->
+            <app-quotee-detail *ngIf='quote.showauthor' [quote]='quote' (isComplete)='completeQuote($event,i)'></app-quotee-detail>
 
-            </div>
-        </ul>
-    </div>
+        </div>
+    </ul>
+
 </div>

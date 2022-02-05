@@ -15,7 +15,13 @@ export class QuoteeComponent implements OnInit {
   toggleDetails(index:number){
     this.quotes[index].showauthor = !this.quotes[index].showauthor;
   }
-
+//delete details
+//will be triggered when event is captured
+completeQuote(isComplete:boolean, index:number){
+  if (isComplete) {
+    this.quotes.splice(index,1);
+  }
+}
 
   constructor() { }
 

@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Quotes } from '../quotes';
 @Component({
   selector: 'app-quotee-detail',
   templateUrl: './quotee-detail.component.html',
@@ -11,7 +12,7 @@ export class QuoteeDetailComponent implements OnInit {
 //output property binding
 @Output() isComplete = new EventEmitter<boolean>();
 
-goalComplete(complete:boolean){
+quoteComplete(complete:boolean){
   this.isComplete.emit(complete);
 }
   constructor() { }
