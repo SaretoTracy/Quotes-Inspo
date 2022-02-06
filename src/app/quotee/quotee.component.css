@@ -10,3 +10,8 @@ span {
 .quotes {
     border: 2px 0 2px solid#fc5276;
 }
+
+.vote {
+    display: flex;
+    justify-content: space-evenly;
+}
