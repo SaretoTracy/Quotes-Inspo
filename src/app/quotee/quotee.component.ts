@@ -17,18 +17,12 @@ export class QuoteeComponent implements OnInit {
     this.quotes[index].showauthor = !this.quotes[index].showauthor;
   }
 //delete details
-
-  //delete details
-  completeQuote(isComplete:boolean, index:number){
-    if (isComplete) {
-      let toDelete = confirm(`Are you sure you want to delete ${this.quote[index].name}?`)
-      if (toDelete){
-        this.quote.splice(index,1)
-      }
-    }
-  }
 //will be triggered when event is captured
-
+completeQuote(isComplete:any, index:number){
+  if (isComplete) {
+    this.quotes.splice(index,1);
+  }
+}
 @Input() quote:any;
 
 likes:number =0;

@@ -13,7 +13,7 @@
             </div>
             <button (click)='toggleDetails(i)'><i class="fas fa-chevron-down"></i></button>
             <!--shows and hide authors description-->
-            <app-quotee-detail *ngIf='quote.showauthor'></app-quotee-detail>
+            <app-quotee-detail *ngIf='quote.showauthor' [quote]='quote' (isComplete)='completeQuote($event,i)'></app-quotee-detail>
 
 
         </div>
