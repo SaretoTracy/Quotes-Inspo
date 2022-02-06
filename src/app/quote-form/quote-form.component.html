@@ -9,12 +9,11 @@
         <div class="container-fluid">
             <h2 class="text-center">Create a new Quote</h2>
             <hr>
-            <form>
+            <form #quoteForm='ngForm'>
                 <div class="form-group">
 
-                    <label for="name">Name</label>
-                    <input type="text" required class="form-control" id="name">
-
+                    <label for="name">Quote</label>
+                    <input type="text" required class="form-control" id="quote" [(ngModel)]="newQuote.quote" name="quote"> Display {{newQuote.quote}}
                 </div>
                 <div class="form-group">
 
@@ -23,10 +22,12 @@
 
                 </div>
                 <div class="form-group">
-                    <label for="complete">Submited on</label>
+
+                    <label for="complete">Completion</label>
                     <input type='date' id="complete" required>
 
                 </div>
+                <button type="submit" class="btn btn-success">Add Goal</button>
             </form>
         </div>
 
