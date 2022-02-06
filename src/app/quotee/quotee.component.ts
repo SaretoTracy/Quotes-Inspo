@@ -17,19 +17,20 @@ export class QuoteeComponent implements OnInit {
     this.quotes[index].showauthor = !this.quotes[index].showauthor;
   }
 //delete details
-//will be triggered when event is captured
-completeQuote(isComplete:boolean, index:number){
-  if (isComplete) {
-    this.quotes.splice(index,1);
+
+  //delete details
+  completeQuote(isComplete:boolean, index:number){
+    if (isComplete) {
+      let toDelete = confirm(`Are you sure you want to delete ${this.quote[index].name}?`)
+      if (toDelete){
+        this.quote.splice(index,1)
+      }
+    }
   }
-}
+//will be triggered when event is captured
+
 @Input() quote:any;
 
-@Output() isComplete = new EventEmitter<boolean>();
-
-quoteDelete(complete:boolean){
-  this.isComplete.emit(complete);
-}
 likes:number =0;
 dislikes:number =0;
 
