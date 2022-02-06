@@ -7,8 +7,8 @@
             <h1>quote</h1>
             <p> {{quote.quote}}</p>
             <div class="vote">
-                <button (click)='upVote()'><i class="fas fa-thumbs-up"></i><span>{{currentNumber}}</span></button>
-                <button (click)='downVote()'><i class="fas fa-thumbs-down"></i><span>{{currentNumber}}</span></button>
+                <button (click)='upVote()'><i class="fas fa-thumbs-up"></i><span>{{likes}}</span></button>
+                <button (click)='downVote()'><i class="fas fa-thumbs-down"></i><span>{{dislikes}}</span></button>
                 <button (click)='quoteDelete(true)'><i class="fas fa-trash-alt"></i></button>
             </div>
             <button (click)='toggleDetails(i)'><i class="fas fa-chevron-down"></i></button>

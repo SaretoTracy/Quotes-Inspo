@@ -30,13 +30,14 @@ completeQuote(isComplete:boolean, index:number){
 quoteDelete(complete:boolean){
   this.isComplete.emit(complete);
 }
-currentNumber:number =0;
+likes:number =0;
+dislikes:number =0;
 
 upVote(){
-  this.currentNumber++;//likes increament
+  this.likes++;//likes increament
 }
 downVote(){
-  this.currentNumber++;//dislike increment
+  this.dislikes++;//dislike increment
 }
 
   constructor() { }
