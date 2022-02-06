@@ -1,3 +1,4 @@
+
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Quotes } from '../quotes';
 @Component({
@@ -7,13 +8,13 @@ import { Quotes } from '../quotes';
 })
 export class QuoteeDetailComponent implements OnInit {
   //input binding
-  @Input() quote: any;
-  isComplete: any;
+@Input() quote:any;
 
-
+  @Output() remove= new EventEmitter<boolean>();
   quoteDelete(complete:boolean){
-    this.isComplete.emit(complete);
+    this.remove.emit(complete);
   }
+  
   constructor() { }
 
   ngOnInit(): void {

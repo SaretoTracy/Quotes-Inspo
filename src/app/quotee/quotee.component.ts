@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component,  Input, OnInit,  } from '@angular/core';
 import { Quotes } from '../quotes';
 @Component({
   selector: 'app-quotee',
@@ -18,9 +18,12 @@ export class QuoteeComponent implements OnInit {
   }
 //delete details
 //will be triggered when event is captured
-completeQuote(isComplete:any, index:number){
-  if (isComplete) {
-    this.quotes.splice(index,1);
+deleteQuote(remove:any, index:number){
+  if (remove){
+    let alertMessage =confirm("Hey Johnny");
+    if(alertMessage){
+      this.quotes.splice(index,1);
+    }
   }
 }
 @Input() quote:any;
