@@ -18,7 +18,7 @@
                     </div>
 
                     <!--shows and hide authors description-->
-                    <app-quotee-detail *ngIf='quote.showauthor' [quote]='quote' (deleteQuote)='deleteQuote($event,i)'></app-quotee-detail>
+                    <app-quotee-detail *ngIf='quote.showauthor' [quote]='quote' (remove)='deleteQuote($event,i)'></app-quotee-detail>
                 </div>
             </div>
 

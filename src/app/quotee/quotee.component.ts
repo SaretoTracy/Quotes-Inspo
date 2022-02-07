@@ -24,7 +24,7 @@ export class QuoteeComponent implements OnInit {
 //will be triggered when event is captured
 deleteQuote(remove:any, index:number){
   if (remove){
-    let alertMessage =confirm("Hey Johnny");
+    let alertMessage =confirm("Are you sure you want to delete this Quote?");
     if(alertMessage){
       this.quotes.splice(index,1);
     }
