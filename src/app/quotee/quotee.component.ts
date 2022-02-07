@@ -34,11 +34,11 @@ deleteQuote(remove:any, index:number){
 @Input() quote:any;
 
 likes:number =0;
-dislikes:number =0;
-
 upVote(){
   this.likes++;//likes increament
 }
+
+dislikes:number =0;
 downVote(){
   this.dislikes++;//dislike increment
 }

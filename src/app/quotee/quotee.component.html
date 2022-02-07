@@ -8,11 +8,15 @@
             <div class="card" style="width: 18rem;">
                 <div class="card-body">
                     <!-- to register the index of each quote item in the quotes list. -->
-                    <h3>quote</h3>
+                    <div>
 
-                    <p> <em>"</em>{{quote.quote}}<br><em>"</em></p>
+                        <h3>quote</h3>
+
+                        <p> <em>"</em>{{quote.quote}}<br><em>"</em></p>
+                    </div>
                     <div class="vote">
                         <button (click)='toggleDetails(i)'><i class="fas fa-chevron-down"></i></button>
+
                         <button (click)='upVote()'><i class="fas fa-thumbs-up"></i><span>{{likes}}</span></button>
                         <button (click)='downVote()'><i class="fas fa-thumbs-down"></i><span>{{dislikes}}</span></button>
                     </div>
