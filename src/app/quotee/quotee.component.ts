@@ -16,6 +16,7 @@ export class QuoteeComponent implements OnInit {
     quotes.id = quotesLength+1;
     this.quotes.push(quotes)
   }
+  
   //toogle details
   toggleDetails(index:number){
     this.quotes[index].showauthor = !this.quotes[index].showauthor;
@@ -41,6 +42,7 @@ upVote(){
 downVote(){
   this.dislikes++;//dislike increment
 }
+
 
   constructor() { }
 
