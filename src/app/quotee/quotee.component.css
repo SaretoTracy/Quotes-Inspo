@@ -10,12 +10,17 @@ h2 {
     font-size: 8rem;
 }
 
+em {
+    font-size: 3rem;
+    color: #feb83f;
+}
+
 .fas {
     color: #5450ae;
 }
 
 button {
-    background: transparent;
+    background: #feb83f;
 }
 
 h3 {
@@ -36,6 +41,10 @@ span {
 
 .card-body {
     border-right: 8px solid #feb83f;
+}
+
+.card-body:hover {
+    box-shadow: 8px 5px 5px 5px;
 }
 
 .vote {
