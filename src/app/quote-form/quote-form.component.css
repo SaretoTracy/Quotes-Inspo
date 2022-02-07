@@ -3,5 +3,19 @@
     background: rgb(254, 184, 63);
     font-weight: 900;
     font-size: 20x;
+    margin-top: 1rem;
     background: linear-gradient(90deg, rgba(254, 184, 63, 1) 0%, rgba(254, 184, 63, 1) 43%, rgba(84, 80, 174, 1) 43%, rgba(84, 80, 174, 1) 100%);
+}
+
+.card {
+    width: 60%;
+    margin-bottom: 2rem;
+}
+
+h2 {
+    color: #5450ae;
+}
+
+span {
+    text-decoration: underline #feb83f;
 }
