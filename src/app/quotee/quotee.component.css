@@ -3,12 +3,19 @@ h1 {
     color: #fc5276;
 }
 
+h5 {
+    text-align: center;
+}
+
 span {
     color: #5450ae;
 }
 
 .quotes {
-    border: 2px 0 2px solid#fc5276;
+    /* border-right: 8px solid #fc5276; */
+    margin-top: 4rem;
+    justify-content: space-around;
+    border: 2px solid red;
 }
 
 .vote {

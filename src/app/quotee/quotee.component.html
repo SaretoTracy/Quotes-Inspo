@@ -1,11 +1,11 @@
 <div class="container">
     <h1>Quotes <span>Inspo</span></h1>
-
+    <h5>These famous life sayings and quotes about life will inspire positivity and good, happy feelings.<br> Enjoy some inspirational quotes and generate your quote.</h5>
     <ul class="row">
-        <div class="quotes col-md-4" *ngFor='let quote of quotes;let i = index'>
+        <div class="quotes col-md-4 " *ngFor='let quote of quotes;let i = index'>
             <!-- to register the index of each quote item in the quotes list. -->
             <h1>quote</h1>
-            <p> {{quote.quote}}</p>
+            <p> "{{quote.quote}}"</p>
             <div class="vote">
                 <button (click)='upVote()'><i class="fas fa-thumbs-up"></i><span>{{likes}}</span></button>
                 <button (click)='downVote()'><i class="fas fa-thumbs-down"></i><span>{{dislikes}}</span></button>
