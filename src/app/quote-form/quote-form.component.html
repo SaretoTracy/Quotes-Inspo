@@ -9,19 +9,22 @@
         <div class="container-fluid">
             <h2 class="text-center">Create a new <span>Quote</span></h2>
 
-            <form (ngSubmit)='submitQuote()' #quoteForm='ngForm'>
+            <form (ngSubmit)='submitQuote( quoteForm, quoteForm.value)' #quoteForm='ngForm'>
                 <div class="form-group">
 
-                    <label for="description">Quote</label>
-                    <textarea class="form-control" id="description" rows="4" [(ngModel)]="newQuote.quote" name="quote" #quote="ngModel" required></textarea>
-                    <div [hidden]="quote.valid || quote.pristine" class="alert alert-danger">
-                        <p>fill in your quote....</p>
+                    <label for="quote">Quote</label>
+                    <textarea class="form-control" id="quote" rows="4" ngModel name="quote" #quote="ngModel" required></textarea>
+                    <div *ngIf="quote.invalid && (quote.dirty || quote.touched)" class="alert alert-danger">
+
+                        <div *ngIf="quote.errors?.['required']">
+                            quote is required.
+                        </div>
                     </div>
                 </div>
                 <div class="form-group">
 
-                    <label for="name">Author</label>
-                    <input type="text" class="form-control" id="name" [(ngModel)]="newQuote.author" name="author" #name='ngModel' required>
+                    <label for="author">Author</label>
+                    <input type="text" class="form-control" id="author" ngModel name="author" #name='ngModel' required>
                     <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
                         <p>Author's Name...</p>
                     </div>
@@ -29,8 +32,8 @@
 
                 <div class="form-group">
 
-                    <label for="complete">Your name</label>
-                    <input type='text' class="form-control" id="complete" [(ngModel)]="newQuote.submission" name="submission" #submission="ngModel" required>
+                    <label for="name">Your name</label>
+                    <input type='text' class="form-control" id="name" ngModel name="submission" #submission="ngModel" required>
                     <div [hidden]="submission.valid || submission.pristine" class="alert alert-danger">
                         <p>Your name...</p>
                     </div>
