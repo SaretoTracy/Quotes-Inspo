@@ -1,0 +1,7 @@
+.btn {
+    border: none;
+    background: rgb(254, 184, 63);
+    font-weight: 900;
+    font-size: 20x;
+    background: linear-gradient(90deg, rgba(254, 184, 63, 1) 0%, rgba(254, 184, 63, 1) 43%, rgba(84, 80, 174, 1) 43%, rgba(84, 80, 174, 1) 100%);
+}

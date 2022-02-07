@@ -1,6 +1,25 @@
 h1 {
     font-family: 'Yellowtail', cursive;
-    color: #fc5276;
+    color: #feb83f;
+}
+
+h2 {
+    display: flex;
+    float: right;
+    color: #feb83f;
+    font-size: 8rem;
+}
+
+.fas {
+    color: #5450ae;
+}
+
+button {
+    background: transparent;
+}
+
+h3 {
+    color: #5450ae;
 }
 
 h5 {
@@ -12,10 +31,11 @@ span {
 }
 
 .quotes {
-    /* border-right: 8px solid #fc5276; */
     margin-top: 4rem;
-    justify-content: space-around;
-    border: 2px solid red;
+}
+
+.card-body {
+    border-right: 8px solid #feb83f;
 }
 
 .vote {
