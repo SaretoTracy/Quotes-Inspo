@@ -12,7 +12,7 @@ This an application where users can delete quotes, create quotes and have those 
 
 ## Live Demo
 
-[Live Demo Link]
+[Live Demo Link] https://saretotracy.github.io/Quotes-Inspo/
 
 
 ## Getting Started
@@ -27,7 +27,7 @@ A computer with a working and up to date web browser.
 
 - Clone the repository to your folder of choice using Git (or just download all the files)
 ```
-$ git clone https://
+$ git clone https://saretotracy.github.io/Quotes-Inspo/
 ```
 - Open the index.html file (in the root folder) and the website should show up.
 
