@@ -15,6 +15,13 @@ export class QuoteFormComponent implements OnInit {
  @Output() addQuote = new EventEmitter<Quotes>();
 
   submitQuote(form:NgForm , data:any){
+
+    if (form.valid) {
+      this.addQuote.emit(data);
+      form.reset();
+    } else {
+      alert("Enter name and quote please");
+    }
     form.reset()
 // this.addQuote.emit(this.newQuote);
   }

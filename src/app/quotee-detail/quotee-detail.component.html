@@ -1,3 +1,7 @@
 <p>Author:{{quote.author}}</p>
 <p>Submitted by:{{quote.submission}}</p>
+
+<p class="">
+    <span class="monospace fs-6">posted on{{quote.post|timeCount}</span>
+</p>
 <button (click)='quoteDelete(true)'> <i class="fas fa-trash-alt"></i></button>
