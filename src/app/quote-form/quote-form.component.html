@@ -12,26 +12,27 @@
             <form (ngSubmit)='submitQuote()' #quoteForm='ngForm'>
                 <div class="form-group">
 
-                    <label for="name">Name</label>
-                    <input type="text" class="form-control" id="name" [(ngModel)]="newQuote.author" name="author" #name='ngModel' required>
-                    <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
-                        <p>Author Name is required</p>
-                    </div>
-                </div>
-                <div class="form-group">
-
                     <label for="description">Quote</label>
                     <textarea class="form-control" id="description" rows="4" [(ngModel)]="newQuote.quote" name="quote" #quote="ngModel" required></textarea>
                     <div [hidden]="quote.valid || quote.pristine" class="alert alert-danger">
-                        <p>quote is required</p>
+                        <p>fill in your quote....</p>
                     </div>
                 </div>
                 <div class="form-group">
 
-                    <label for="complete">Completion</label>
-                    <input type='date' id="complete" [(ngModel)]="newQuote.submissionDate" name="submissionDate" #submissionDate="ngModel" required>
-                    <div [hidden]="submissionDate.valid || submissionDate.pristine" class="alert alert-danger">
-                        <p>Date is required</p>
+                    <label for="name">Author</label>
+                    <input type="text" class="form-control" id="name" [(ngModel)]="newQuote.author" name="author" #name='ngModel' required>
+                    <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
+                        <p>Author's Name...</p>
+                    </div>
+                </div>
+
+                <div class="form-group">
+
+                    <label for="complete">Your name</label>
+                    <input type='text' class="form-control" id="complete" [(ngModel)]="newQuote.submission" name="submission" #submission="ngModel" required>
+                    <div [hidden]="submission.valid || submission.pristine" class="alert alert-danger">
+                        <p>Your name...</p>
                     </div>
                 </div>
                 <button type="submit" class="btn btn-success">Add Quote</button>
