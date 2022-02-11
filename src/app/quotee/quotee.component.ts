@@ -3,6 +3,9 @@ import { Quotes } from '../quotes';
 import { quotes } from '../quoteList';
 import { QuoteService } from '../quote-service/quote.service';
 import { AlertService } from '../alert-service/alert.service';
+import { HttpClient } from '@angular/common/http';
+import { Quote } from '../quote-class/quote';
+
 @Component({
   selector: 'app-quotee',
   templateUrl: './quotee.component.html',
@@ -53,7 +56,18 @@ constructor(quoteservice:QuoteService, alertService:AlertService) {
 
 }
 
-  ngOnInit(): void {
+  ngOnInit(){
+
+    interface ApiResponse{
+      author:string;
+      quote:string;
+    }
+
+    this.http.get<ApiResponse>("http://quotes.stormconsultancy.co.uk/random.json").subscribe(data=>{
+      // Succesful API request
+      this.quote = new Quote(data.author, data.quote)
+    })
+  }
   }
 
-}
+
