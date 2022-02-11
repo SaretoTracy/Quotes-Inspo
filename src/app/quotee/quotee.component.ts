@@ -10,14 +10,14 @@ import { QuoteService } from '../quote-service/quote.service';
 export class QuoteeComponent implements OnInit {
   
   addNewQuote(quotes: Quotes){
-    let quotesLength = this.quote.length;
+    let quotesLength = this.quotes.length;
     quotes.id = quotesLength+1;
-    this.quote.push(quotes)
+    this.quotes.push(quotes)
   }
   
   //toogle details
   toggleDetails(index:number){
-    this.quote[index].showauthor = !this.quote[index].showauthor;
+    this.quotes[index].showauthor = !this.quotes[index].showauthor;
   }
 //delete details
 //will be triggered when event is captured
@@ -25,7 +25,7 @@ deleteQuote(remove:any, index:number){
   if (remove){
     let alertMessage =confirm("Are you sure you want to delete this Quote?");
     if(alertMessage){
-      this.quote.splice(index,1);
+      this.quotes.splice(index,1);
     }
   }
 }
