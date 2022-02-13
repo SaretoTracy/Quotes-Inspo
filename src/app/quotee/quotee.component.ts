@@ -50,7 +50,7 @@ downVote(){
 quotes:Quotes[];
 alertService:AlertService;
 
-constructor(quoteservice:QuoteService, alertService:AlertService) {
+constructor(quoteservice:QuoteService, alertService:AlertService, private http:HttpClient) {
   this.quotes = quoteservice.getQuotes()
   this.alertService = alertService;
 
@@ -59,13 +59,13 @@ constructor(quoteservice:QuoteService, alertService:AlertService) {
   ngOnInit(){
 
     interface ApiResponse{
-      author:string;
-      quote:string;
+      writter:string;
+      quotess:string;
     }
 
     this.http.get<ApiResponse>("http://quotes.stormconsultancy.co.uk/random.json").subscribe(data=>{
       // Succesful API request
-      this.quote = new Quote(data.author, data.quote)
+      this.quote = new Quote(data.writter, data.quotess)
     })
   }
   }
