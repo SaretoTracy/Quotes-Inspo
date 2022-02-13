@@ -63,9 +63,13 @@ constructor(quoteservice:QuoteService, alertService:AlertService, private http:H
       quotess:string;
     }
 
-    this.http.get<ApiResponse>("http://quotes.stormconsultancy.co.uk/random.json").subscribe(data=>{
+    this.http.get<ApiResponse>("http://quoets.stormconsultancy.co.uk/random.json").subscribe(data=>{
       // Succesful API request
       this.quote = new Quote(data.writter, data.quotess)
+    }
+    ,err=>{
+        this.quote = new Quote("Winston Churchill","Never never give up!")
+        console.log("An error occurred")
     })
   }
   }
