@@ -9,6 +9,8 @@ import { QuoteeDetailComponent } from './quotee-detail/quotee-detail.component';
 import { QuoteFormComponent } from './quote-form/quote-form.component';
 import { FormsModule } from '@angular/forms';
 import { TimeCountPipe } from './time-count.pipe';
+import { NgProgressHttpClientModule } from '@ngx-progressbar/http-client';
+import { NgProgressModule } from '@ngx-progressbar/core';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,10 @@ import { TimeCountPipe } from './time-count.pipe';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    NgProgressModule,
+    NgProgressHttpClientModule
+   
   ],
   providers: [],
   bootstrap: [AppComponent]

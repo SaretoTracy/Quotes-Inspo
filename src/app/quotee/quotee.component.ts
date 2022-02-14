@@ -6,6 +6,7 @@ import { AlertService } from '../alert-service/alert.service';
 import { HttpClient } from '@angular/common/http';
 import { Quote } from '../quote-class/quote';
 
+
 @Component({
   selector: 'app-quotee',
   templateUrl: './quotee.component.html',
